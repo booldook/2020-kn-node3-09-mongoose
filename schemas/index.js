@@ -16,6 +16,12 @@ module.exports = () => {
 	}
 	connect();
 
-	require('./user');
+	mongoose.connection.on('error', (err) => {
+		throw new Error(err);
+	});
+
+	mongoose.connection.on('disconnected', connect);
+
+	require('./User');
 	require('./board');
 }

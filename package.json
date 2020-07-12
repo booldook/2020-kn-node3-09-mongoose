@@ -11,6 +11,7 @@
     "dotenv": "^8.2.0",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
+    "method-override": "^3.0.0",
     "mongoose": "^5.9.21",
     "morgan": "~1.9.1",
     "pug": "^3.0.0"

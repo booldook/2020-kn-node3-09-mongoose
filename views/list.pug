@@ -1,0 +1,18 @@
+doctype html
+html(lang="ko")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		title 회원리스트
+		script(src="/javascripts/mongoose.js")
+	body
+		ul.lists
+			each v in result
+				li.list
+					span.name
+						a(href=`/user/update/${v._id}`)= v.userid
+					span.age(style="margin-left: 20px")= v.age
+					span(onclick=`deleteData("${v._id}");`, style="margin-left: 20px;") 삭제
+		form(method="post" action="/user/delete" name="deleteForm"  enctype="application/x-www-form-urlencoded")
+			input(type="hidden" name="_method" value="delete")
+			input(type="hidden" name="_id" value="")

@@ -1,5 +1,5 @@
 function deleteData(_id) {
 	var f = document.deleteForm;
-	f._id = _id;
+	f._id.value = _id;
 	f.submit();
 }

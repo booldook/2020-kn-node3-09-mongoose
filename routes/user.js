@@ -12,8 +12,10 @@ router.put('/save', async (req, res, next) => {
 	res.redirect('/user/list');
 });
 
-router.delete('/delete', (req, res, next) => {
-	res.send('DELETE');
+router.delete('/delete', async (req, res, next) => {
+	const _id = req.body._id;
+	const result = await User.remove({_id});
+	res.redirect('/user/list');
 })
 
 router.post('/save', async (req, res, next) => {

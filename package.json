@@ -14,6 +14,6 @@
     "method-override": "^3.0.0",
     "mongoose": "^5.9.21",
     "morgan": "~1.9.1",
-    "pug": "^3.0.0"
+    "pug": "^3.0.1"
   }
 }
